@@ -15,12 +15,18 @@ public class MatrizIdentidad {
     }
     
     public void generarMatriz(){
-        int valor = 1, fila = 0, fin = n-1;
-        int[][] matriz = new int [n][n];
-        
-        for (int i = fila; i < fin; i++) {
-            matriz[fila][i] = valor++;
+        int[][] m = new int[n][n];
+       
+        for (int i = 0; i < n; i++) {
+            m [i][i]=1;
         }
+       
+        for (int i= 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(m[i][j]+ " ");
+            }
+            System.out.println();
+        }  
     }
     
     public static void main(String[] args){
